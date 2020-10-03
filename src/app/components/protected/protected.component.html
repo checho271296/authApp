@@ -1,1 +1,14 @@
-<p>protected works!</p>
+<h1>User Profile </h1>
+
+<div class="container" *ngIf="auth.user$ | async as user">
+    <figure>
+        <img [src]="user.picture" class="figure-img img-fluid rounded" [ngStyle]="{'width.px': 150}">
+
+    </figure>
+
+    <pre>
+        <code>{{user | json}}</code>
+    </pre>
+
+
+</div>
